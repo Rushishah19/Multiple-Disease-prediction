@@ -5,4 +5,4 @@ Prediction of the five different disease
 - Breast Cancer
 - Diabetes
 - Kidney 
-Link of website - https://rushishah19-multiple-disease-prediction-main-jhrmbe.streamlit.app/
+# Link of website  https://rushishah19-multiple-disease-prediction-main-jhrmbe.streamlit.app/
