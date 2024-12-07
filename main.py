@@ -24,7 +24,7 @@ st.markdown(hide_st_style,unsafe_allow_html=True)
 with st.sidebar:
     selected = option_menu(
         menu_title="Select the Disease",
-        options=["Heart Disease","Diabetes","Kidney Disease","Lung Cancer","Breast Cancer"],
+        options=["Heart Disease","Diabetes","Kidney Disease","Lung Cancer"],
         menu_icon="None",
         
     )
