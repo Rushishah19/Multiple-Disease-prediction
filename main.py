@@ -6,7 +6,7 @@ heart_disease = pickle.load(open('heart_disease.sav','rb'))
 diabetes_disease = pickle.load(open('diabetes_disease.sav','rb'))
 kidney_disease = pickle.load(open('kidney_disease.sav','rb'))
 lung_disease = pickle.load(open('lung_cancer.sav','rb'))
-breast_disease = pickle.load(open('breast_cancer.sav','rb'))
+
 st.set_page_config(page_title='Disease Prediction', page_icon=':syringe:')
 #Title
 st.title('Disease Prediction using ML')
