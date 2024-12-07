@@ -6,7 +6,7 @@ heart_disease = pickle.load(open('heart_disease.sav','rb'))
 diabetes_disease = pickle.load(open('diabetes_disease.sav','rb'))
 kidney_disease = pickle.load(open('kidney_disease.sav','rb'))
 lung_disease = pickle.load(open('lung_cancer.sav','rb'))
-breast_disease = pickle.load(open('breast_cancer.sav','rb'))
+
 st.set_page_config(page_title='Disease Prediction', page_icon=':syringe:')
 #Title
 st.title('Disease Prediction using ML')
@@ -222,61 +222,6 @@ if selected == "Lung Cancer":
             lung_result = 'The Person is Suffering from Diabetes'
         
     st.success(lung_result)
-    st.caption('Made by Rushi Shah')
-
-
-#--Breast Disease
-if selected == "Breast Cancer":
-    #Title
-    st.header("Breast Cancer Prediction")
-
-    #Taking input from user
-    col1 , col2 ,col3 = st.columns(3)
-
-    with col1:
-        meantexture = st.text_input('Mean Texture')    
-    with col2:
-        meansmoothness = st.text_input('Mean Smoothness')    
-    with col3:
-        meancompactness = st.text_input('Mean Compactness')    
-    with col1:
-        meanconcavity = st.text_input('Mean Concavity')    
-    with col2:
-        areaerror = st.text_input('Area Error')    
-    with col3:
-        compactnesserror = st.text_input('Compactness Error')    
-    with col1:
-        symmetryerror = st.text_input('Symmetry Error')    
-    with col2:
-        fractaldimensionerror = st.text_input('Fractional Dimension Error')    
-    with col3:
-        worstradius = st.text_input('Worst Radius')    
-    with col1:
-        worsttexture = st.text_input('Worst Texture')    
-    with col2:
-        worstperimeter = st.text_input('Worst Perimeter')    
-    with col3:
-        worstarea = st.text_input('Worst Area')    
-    with col1:
-        worstconcavity = st.text_input('Worst Concavity')    
-    with col2:
-        worstconcavepoints = st.text_input('Worst Concave Points')        
-    with col3:
-        worstsymmetry = st.text_input('Worst Symmetry')
-
-    #Code for prediction 
-    breast_cancer_result =''
-
-    #Button for prediction
-    if st.button('Breast Cancer Test Result'):
-        breast_cancer_prediction = breast_cancer_disease.predict([[meantexture,meansmoothness,meancompactness,meanconcavity,areaerror,compactnesserror,symmetryerror,fractaldimensionerror,worstradius,worsttexture,worstperimeter,worstarea,worstconcavity,worstconcavepoints,worstsymmetry]])
-
-        if (breast_cancer_prediction [0]==0):
-            breast_cancer_result = 'The Person is Not suffering from Breast Cancer'
-        else:
-            breast_cancer_result = 'The Person is Suffering from Breast Cancer'
-        
-    st.success(breast_cancer_result)
     st.caption('Made by Rushi Shah')
    
 
